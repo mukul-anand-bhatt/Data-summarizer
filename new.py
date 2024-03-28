@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import matplotlib.pyplot as plt
+# import st.pyplot as plt
 
 # Title of the app
 st.title('Data Summarizing')
@@ -12,7 +12,7 @@ df = pd.DataFrame()
 # Sidebar for navigation
 option = st.sidebar.selectbox(
     'Choose your option',
-    ('Data Visualisation', 'Analysis', 'Read csv/excel file', 'Manipulation', 'Exit')
+    ('Data Visualisation', 'Analysis', 'Manipulation', 'Exit')
 )
 
 # Read CSV/Excel file
@@ -123,26 +123,6 @@ elif option == 'Analysis':
         elif aggregation_function == 'count':
             st.write(df[column_name].count())
 
-elif option == 'Read csv/excel file':
-    file = st.file_uploader("Upload a CSV/Excel file", type=["csv", "xlsx"])
-    if file is not None:
-        # Check if the file is a CSV or Excel file and read accordingly
-        if file.type == "text/csv":
-            df = pd.read_csv(file)
-        elif file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-            df = pd.read_excel(file)
-        else:
-            st.error("Unsupported file type. Please upload a CSV or Excel file.")
-        
-        
-        # Display the file name and type
-        st.write(f"File name: {file.name}")
-        st.write(f"File type: {file.type}")
-        st.write("File received successfully.")
-        
-        # Ask the user for the number of rows to display
-        n = st.number_input('Enter the number of rows to display', min_value=1, max_value=len(df), value=5)
-        st.write(df.head(n))
 
 
 

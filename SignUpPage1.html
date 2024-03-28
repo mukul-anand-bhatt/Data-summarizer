@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipPMuRrA29CsZZgP0PxHqfnN9ur4RQmWIjsgcAPi=s1360-w1360-h1020'); /* Specify the path to your background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .signup-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+            padding: 40px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="password"],
+        .signup-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .signup-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .signup-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .signup-container .login-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+
+
+    
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="LoginPage.html" method="post">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign Up" >
+        </form>
+        <p><a href="LoginPage.html" class="login-link">Already have an account? Login</a></p>
+    </div>
+    <script>
+        function redirectToLogin() {
+            window.location.href = "C:/Users/mukul/OneDrive - UPES/Documents/reactBasics/Text-summarizer/LoginPage.html";
+        }
+        </script>
+</body>
+</html>
