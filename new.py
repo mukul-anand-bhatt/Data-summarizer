@@ -174,3 +174,6 @@ if option == 'Manipulation':
 
 elif option == 'Exit':
     st.write('Exiting the application.')
+
+#adding a button foe logout
+st.button(label='Logout', key=None)   # Add this line at the end</s
