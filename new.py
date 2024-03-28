@@ -72,7 +72,7 @@ if option == 'Data Visualisation':
 
     elif visual_option == 'Pie Charts':
         st.subheader('Pie Charts')
-        fig, ax = plt.subplots()
+        fig, ax = st.subplots()
         ax.pie(df[y_column], labels=df[x_column], autopct='%1.1f%%')
         st.pyplot(fig)
 
