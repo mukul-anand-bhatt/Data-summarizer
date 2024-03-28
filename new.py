@@ -43,7 +43,7 @@ if option == 'Data Visualisation':
     # Visualization options
     visual_option = st.selectbox(
         'Choose a visualization type',
-        ('Line Charts', 'Bar Charts', 'Horizontal Bar Charts', 'Scatter Charts', 'Pie Charts')
+        ('Line Charts', 'Bar Charts', 'Horizontal Bar Charts', 'Scatter Charts')
     )
 
     # Allow the user to select columns for visualization
@@ -70,11 +70,7 @@ if option == 'Data Visualisation':
         st.subheader('Scatter Charts')
         st.scatter_chart(df[[x_column, y_column]])
 
-    elif visual_option == 'Pie Charts':
-        st.subheader('Pie Charts')
-        fig, ax = st.subplots()
-        ax.pie(df[y_column], labels=df[x_column], autopct='%1.1f%%')
-        st.pyplot(fig)
+   
 
 elif option == 'Analysis':
     # Analysis options
