@@ -175,5 +175,8 @@ if option == 'Manipulation':
 elif option == 'Exit':
     st.write('Exiting the application.')
 
-#adding a button foe logout
-st.button(label='Logout', key=None)   # Add this line at the end</s
+# Check if the logout button was pressed
+import webbrowser
+
+if st.button('Logout', key='logout_button'):
+    webbrowser.open('https://nimble-custard-c705a0.netlify.app/')
