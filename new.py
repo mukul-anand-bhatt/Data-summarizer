@@ -127,4 +127,4 @@ elif option == 'Exit':
 # Check if the logout button was pressed
 
 
-st.page_link("https://nimble-custard-c705a0.netlify.app/", label="LogOut", icon="🏠")
+st.page_link("https://datavizsumtool.netlify.app/", label="LogOut", icon="🏠")
