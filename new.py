@@ -179,4 +179,4 @@ elif option == 'Exit':
 import webbrowser
 
 if st.button('Logout', key='logout_button'):
-    webbrowser.open('https://nimble-custard-c705a0.netlify.app/')
+    webbrowser.open("https://nimble-custard-c705a0.netlify.app/")
