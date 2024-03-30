@@ -16,7 +16,7 @@ option = st.sidebar.selectbox(
 )
 
 # Read CSV/Excel file
-file = st.file_uploader("Upload a CSV/Excel file", type=["csv"])
+file = st.file_uploader("Upload a CSV", type=["csv"])
 if file is not None:
     # Check if the file is a CSV or Excel file and read accordingly
     if file.type == "text/csv":
@@ -176,7 +176,7 @@ elif option == 'Exit':
     st.write('Exiting the application.')
 
 # Check if the logout button was pressed
-import webbrowser
+# import webbrowser
 
 
 st.page_link("https://nimble-custard-c705a0.netlify.app/", label="LogOut", icon="🏠")
