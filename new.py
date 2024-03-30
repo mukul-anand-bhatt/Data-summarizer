@@ -47,8 +47,8 @@ if option == 'Data Visualisation':
     )
 
     # Allow the user to select columns for visualization
-    x_column = st.selectbox('Select X-axis column', df.columns)
-    y_column = st.selectbox('Select Y-axis column', df.columns)
+    x_column = st.selectbox('Select Variable 1', df.columns)
+    y_column = st.selectbox('Select Variable 2', df.columns)
 
     if visual_option == 'Line Charts':
         st.subheader('Line Charts')
