@@ -16,13 +16,13 @@ option = st.sidebar.selectbox(
 )
 
 # Read CSV/Excel file
-file = st.file_uploader("Upload a CSV/Excel file", type=["csv", "xlsx"])
+file = st.file_uploader("Upload a CSV/Excel file", type=["csv"])
 if file is not None:
     # Check if the file is a CSV or Excel file and read accordingly
     if file.type == "text/csv":
         df = pd.read_csv(file)
-    elif file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-        df = pd.read_excel(file)
+    # elif file.type == "xlsx":
+    #     df = pd.read_excel(file)
     else:
         st.error("Unsupported file type. Please upload a CSV or Excel file.")
     
@@ -178,5 +178,5 @@ elif option == 'Exit':
 # Check if the logout button was pressed
 import webbrowser
 
-if st.button('Logout', key='logout_button'):
-    webbrowser.open("https://nimble-custard-c705a0.netlify.app/")
+
+st.page_link("https://nimble-custard-c705a0.netlify.app/", label="LogOut", icon="🏠")
