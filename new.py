@@ -121,62 +121,10 @@ elif option == 'Analysis':
 
 
 
-
-# # Ensure df is initialized before this block
-# if 'df' not in st.session_state:
-#     st.session_state.df = pd.DataFrame()
-
-# if option == 'Manipulation':
-#     # Data manipulation options
-#     manipulation_option = st.selectbox(
-#         'Choose a manipulation type',
-#         ('Insert a Row', 'Delete a Row(s)', 'Insert a Column', 'Delete a column(s)', 'Modifying Value(s)')
-#     )
-    
-#     if manipulation_option == 'Insert a Row':
-#         row_index = st.number_input('Enter the row index to insert at', min_value=0, max_value=len(st.session_state.df), value=len(st.session_state.df))
-#         val = st.text_input('Enter the list of values in a sequence, separated by commas')
-#         if st.button('Insert Row'):
-#             st.session_state.df.loc[row_index] = val.split(',')
-#             st.write('New row inserted')
-#             st.write(st.session_state.df)
-
-#     elif manipulation_option == 'Delete a Row(s)':
-#         row_index = st.number_input('Enter the row index to delete', min_value=0, max_value=len(st.session_state.df)-1, value=0)
-#         if st.button('Delete Row'):
-#             st.session_state.df = st.session_state.df.drop(row_index)
-#             st.write('Row deleted')
-#             st.write(st.session_state.df)
-
-#     elif manipulation_option == 'Insert a Column':
-#         column_name = st.text_input('Enter the new column name')
-#         val = st.text_input('Enter the list of values in a sequence, separated by commas')
-#         if st.button('Insert Column'):
-#             st.session_state.df[column_name] = val.split(',')
-#             st.write('New column inserted')
-#             st.write(st.session_state.df)
-
-#     elif manipulation_option == 'Delete a column(s)':
-#         column_name = st.selectbox('Select a column to delete', st.session_state.df.columns)
-#         if st.button('Delete Column'):
-#             st.session_state.df = st.session_state.df.drop(columns=[column_name])
-#             st.write('Column deleted')
-#             st.write(st.session_state.df)
-
-#     elif manipulation_option == 'Modifying Value(s)':
-#         row_index = st.number_input('Enter the row index to modify', min_value=0, max_value=len(st.session_state.df)-1, value=0)
-#         column_name = st.selectbox('Select a column to modify', st.session_state.df.columns)
-#         new_value = st.text_input('Enter the new value')
-#         if st.button('Modify Value'):
-#             st.session_state.df.at[row_index, column_name] = new_value
-#             st.write('Value modified')
-#             st.write(st.session_state.df)
-
 elif option == 'Exit':
     st.write('Exiting the application.')
 
 # Check if the logout button was pressed
-# import webbrowser
 
 
 st.page_link("https://nimble-custard-c705a0.netlify.app/", label="LogOut", icon="🏠")
